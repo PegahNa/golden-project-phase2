@@ -9,26 +9,28 @@
 2. Design the Method Signature
    Include the name of the method, its parameters, return value, and side effects.
 
-reading_time = calculate_reading_time(text)
+improve_grammar = grammar(text)
 
 # text is a string of words
 
-# reading_time is a integer representing time/minute
+# is_correct = check_grammar(text)
+
+# is_correct is a boolean depending on whether it checks out
 
 3. Create Examples as Tests
    Make a list of examples of what the method will take and return.
 
-# 1 calculate_reading_time("") => 0
+# 1 check_grammar(" ") => fail Not a "sentence"
 
-# 2 calculate_reading_time("one") => 1
+# 2 check_grammar("Hello, I am Pegah.") => true
 
-# 3 calculate_reading_time("TWO_HUNDRED_WORDS") => 1
+# 3 check_grammar("Hello, I am Pegah") => false
 
-# 4 calculate_reading_time("THREE_HUNDRED_WORDS") => 2
+# 4 check_grammar("hello, I am Pegah") => false
 
-# 5 calculate_reading_time("FOUR_HUNDRED_WORDS") => 2
+# 5 check_grammar("hello, I am Pegah.") => false
 
-# 6 calculate_reading_time("FIVE_THOUSAND_WORDS") => 25
+# 6 check_grammar("Hello, I am Pegah!") => true
 
 4. Implement the behaviour
    After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
