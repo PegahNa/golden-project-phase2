@@ -39,7 +39,7 @@ def complete(task)
 
 end
 
-end 3. Create Examples as Tests
+3. Create Examples as Tests
 
 # EXAMPLE
 
