@@ -1,36 +1,81 @@
+{{PROBLEM}} Class Design Recipe
+
 1. Describe the Problem
 
-# As a user
+   As a user
+   So that I can keep track of my tasks
+   I want a program that I can add todo tasks to and see a list of them.
 
-# So that I can improve my grammar
+As a user
+So that I can focus on tasks to complete
+I want to mark tasks as complete and have them disappear from the list.
 
-# I want to verify that a text starts with a capital letter and ends with a suitable sentence-ending punctuation mark.
+2. Design the Class Interface
+   Include the initializer and public methods with all parameters and return values.
 
-2. Design the Method Signature
-   Include the name of the method, its parameters, return value, and side effects.
+# EXAMPLE
 
-improve_grammar = grammar(text)
+class TodoList
+def initialize
+end
 
-# text is a string of words
+def add(task)
 
-# is_correct = check_grammar(text)
+# Return nothing
 
-# is_correct is a boolean depending on whether it checks out
+end
 
-3. Create Examples as Tests
-   Make a list of examples of what the method will take and return.
+def list
 
-# 1 check_grammar(" ") => fail Not a "sentence"
+# Returns a list of tasks added a strings
 
-# 2 check_grammar("Hello, I am Pegah.") => true
+end
 
-# 3 check_grammar("Hello, I am Pegah") => false
+def complete(task)
 
-# 4 check_grammar("hello, I am Pegah") => false
+# Returns nothing
 
-# 5 check_grammar("hello, I am Pegah.") => false
+# fails if tasks doesn't exist
 
-# 6 check_grammar("Hello, I am Pegah!") => true
+end
 
-4. Implement the behaviour
+end 3. Create Examples as Tests
+
+# EXAMPLE
+
+# 1
+
+todo_list = TodoList.new
+todo_list.list # => []
+
+# 2
+
+todo_list = TodoList.new
+todo_list.add("wash the car")
+todo_list.list # => ["wash the car"]
+
+# 3
+
+todo_list = TodoList.new
+todo_list.add("wash the car")
+todo_list.add("wash the dog")
+todo_list.list # => ["wash the car, "wash the dog"]
+
+# 4
+
+todo_list = TodoList.new
+todo_list.add("wash the car")
+todo_list.add("wash the dog")
+todo_list.complete("wash the car")
+todo_list.list # => ["wash the car, "wash the dog"]
+
+# 5
+
+todo_list = TodoList.new
+todo_list.add("wash the car")
+todo_list.complete("wash the sheep")
+todo_list.list # => fails
+
+4. Implement the Behaviour
+
    After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.

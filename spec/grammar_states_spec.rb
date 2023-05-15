@@ -1,5 +1,5 @@
 require 'grammar_states'
-
+"--color --format documentation"
 RSpec.describe GrammarStats do
     describe "#check" do
       it "returns true if the text starts with a capital letter and ends with a sentence-ending punctuation mark." do
