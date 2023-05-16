@@ -18,7 +18,6 @@ class LetterCounter
         end
       end
       return [most_common_count, most_common]
-      binding.irb
     end
   
     private
