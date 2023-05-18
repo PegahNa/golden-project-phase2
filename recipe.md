@@ -52,3 +52,5 @@ music.list # => ["deep focus", "jazz"]
 4. Implement the Behaviour
 
    After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
+
+rspec ./spec/todo_list_spec.rb ./spec/todo_spec.rb ./spec/todo_integration_spec.rb

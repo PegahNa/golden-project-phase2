@@ -1,4 +1,4 @@
-require 'todo_list'
+require 'list'
 "--color --format documentation"
 RSpec.describe TodoList do
     context "given no tasks" do
